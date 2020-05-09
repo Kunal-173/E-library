@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-library</title>
+  <link rel="icon" type="image/icon" href="capture.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css"/>
+  <script src="https://kit.fontawesome.com/8a9412ad16.js"></script>
+  <script> 
+
+var deadline = new Date("Sep 03, 2020 0:0:0").getTime(); 
+
+var x = setInterval(function() { 
+
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("day").innerHTML =days ; 
+document.getElementById("hour").innerHTML =hours; 
+document.getElementById("minute").innerHTML = minutes; 
+document.getElementById("second").innerHTML =seconds; 
+if (t < 0) { 
+    clearInterval(x); 
+    document.getElementById("demo").innerHTML = "Registration Open!!!"; 
+    document.getElementById("day").innerHTML ='0'; 
+    document.getElementById("hour").innerHTML ='0'; 
+    document.getElementById("minute").innerHTML ='0' ; 
+    document.getElementById("second").innerHTML = '0'; } 
+}, 1000); 
+</script> 
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+</head>
+<body class="main back">
+<section id="Nav"> 
+   <div id="myNav" class="overlay">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<div class="overlay-content">
+    	<a href="#logo" onclick="closeNav()"></i>MainPage</a>
+    	<a href="books_notes/book/book.html"></i>Gate- books & notes</a>
+    	<a href="#"></i>Gate- videos</a>
+    	<a href="#"></i>Gate- Preparation<sup>online resource</sup></a>
+    		<a href="https://chat.whatsapp.com/HM9VJz4a8Ce0TvUZingcxF" target="_blank" class="whataap" title="Join to our whataap group----->>">--need any book??</a>
+    </div>
+   </div>
+   <div>
+ <span style="font-size:30px;cursor:pointer" class="Menu" onclick="openNav()">&#9776;</span>
+ <img class="logo" id="logo" src="/media/GAte Exam2.png">
+ <a href="" class="btn"></i>Back</a>
+</div>
+</section>
+	<section id="MainPage">
+		<h1>What is GATE?</h1>
+		<p>Graduate Aptitude Test(GATE) in Engineering is an examination which opens the gateway
+             to booming public organisations and in the field of research.
+              GATE is an All-India examination administered and conducted in eight
+              zones across the country by the GATE Committee comprising of Faculty members
+               from IISc, Bangalore and other seven IIT’s on behalf of the National Coordinating Board,
+               Department of Education, Ministry of Human Resources Development.</p>
+               <h6><sup>click here</sup>Information about Gate 2020 Exam:
+                <a href="/media/gate.jpg" download><i class="fas fa-download"></i>Download</a> </h6>
+                <h5><i class="fas fa-hand-point-right"></i>..Registration starts
+                  <div id="clockdiv"> 
+  <div> 
+  <span class="days" id="day"></span> 
+  <div class="smalltext">Days</div> 
+</div> 
+<div> 
+  <span class="hours" id="hour"></span> 
+  <div class="smalltext">Hours</div> 
+</div> 
+<div> 
+  <span class="minutes" id="minute"></span> 
+  <div class="smalltext">Minutes</div> 
+</div> 
+<div> 
+  <span class="seconds" id="second"></span> 
+  <div class="smalltext">Seconds</div> 
+</div> 
+</div></h5> 
+ 
+	</section>
+	<section id="" >
+    <div class="row">
+		<div class="col">
+			<p><i class="fas fa-grin-alt"></i>Why Gate?</p>
+			<img src="/media/about.jpg">
+          </div>	
+      <a style="text-decoration: none;" rel="click here" href="https://gradeup.co/toppers-strategy-for-gate-exam-preparation-i-fdba4588-3918-11e6-9c05-5a0191567cd8"target="_blank">
+        <div class="image0">
+        <p><sub style="font-size: 15px;color: #e74c3c">Click here</sub>Top 10 GATE Preparation Strategy to Crack GATE Exam</p>
+        <img src="/media/image0.jpg">
+
+      </div>
+      </a>
+      </div>
+      <div>
+        <h4 class="text0">GATE 2020 Syllabus for Computer Science and
+         Information Technology (CSE/IT)...</h4>
+      </div>
+
+			</section>
+      <section id="section3">
+        <p style="font-weight: lighter;font-size: 15px;font-family: sans-serif; ">Following syllabus is based on GATE 2020 syllabus of Computer Science and Information Technology (CSE / IT). You can also download it in the pdf format from the given link at the bottom of this article.
+
+</p>
+      <h6><a href="https://qualifygate.com/download/page/#https://qualifygate.com/download/syllabi/GA.pdf" style="text-decoration: none;"><i class="fas fa-download"></i>Syllabus for General Aptitude</a>(GA) (common to all papers)</h6>
+      {% block content %}
+
+
+      {% endblock %}  
+    </section>
+    
+
+
+    <section>
+      <h2 style="text-align: center; color: #1abc9c"><i style="font-size: 30px;color: #e74c3c;"; class="fas fa-exclamation"></i>Important Links.</h2>
+      <h3><sup style="font-size: 10px;color: #e74c3c">Click here</sup><a href="https://collegedunia.com/news/e-60-gate-2017-cutoff-for-computer-science-engineering-cse" style="text-decoration: none; color: #3498db;font-weight: lighter;font-family: sans-serif;"target="_blank"><i class="fas fa-download"></i>GATE 2020 CSE/IT Cut off- Check Expected and Previous Year Trends</a></h3>
+      <h3><sup style="font-size: 10px;color: #e74c3c">Click here</sup><a  href="http://gate.iitd.ac.in/PDFs/GATE_2020_IB.pdf" style="text-decoration: none; color: #3498db;font-weight:lighter; font-family:sans-serif;" ><i class="fas fa-download"></i>GATE 2020 Brochure - GATE 2020, IIT Delhi</a></h3>
+      <div style="text-align:right; font-size:10px; ">SK:Rahul</div>
+    </section>
+</section>
+</body>
+</html>
+
