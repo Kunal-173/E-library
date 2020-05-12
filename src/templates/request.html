@@ -1,10 +1,96 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://cdn.pixabay.com/photo/2019/08/09/06/08/library-4394441_960_720.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 
-{% block content %}
-<div style="text-align:center">Request</div>
-<div style="text-align:center">
-  <form method="post" action=".">{% csrf_token %}
-   {{ form.as_p }}
-    	<button type="submit">Send</button>
-  </form></div>
-  {% endblock %}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+<center>
+<h1>Card Flip with Text</h1>
+<h3>Hover over the image below:</h3>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+		<div style="text-align:auto">
+  			<form method="post" action="/gate/">{% csrf_token %}
+
+  				<center>
+  				{{ form.as_table }}</center>
+   				<!--<tr><th>Choose your stream:-</th><td><ul id="id_Subject">
+    <tc><label for="id_Subject_0"><input type="radio" name="Subject" value="cs" required id="id_Subject_0">
+ CSE/IT</label>
+
+</tc>
+    <tc><label for="id_Subject_1"><input type="radio" name="Subject" value="me" required id="id_Subject_1">
+ ME</label>
+
+</tc>
+    <tc><label for="id_Subject_2"><input type="radio" name="Subject" value="ece" required id="id_Subject_2">
+ ECE</label>
+
+</tc>
+    <tc><label for="id_Subject_3"><input type="radio" name="Subject" value="ee" required id="id_Subject_3">
+ EE</label>
+
+</tc>
+</ul></td></tr> -->
+    		<button type="submit">Send</button>
+  			</form></div>
+    	</div>
+  	</div>
+	</div>
+</center>
+</body>
+</html>

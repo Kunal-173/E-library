@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>E-library</title>
-  <link rel="icon" type="image/icon" href="capture.png" />
+  <link rel="icon" type="image/icon" href="/media/capture.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/static/style.css"/>
   <script src="https://kit.fontawesome.com/8a9412ad16.js"></script>
@@ -43,13 +42,13 @@ function closeNav() {
 }
 </script>
 </head>
-<body class="main back">
+<body class="main back" style="background-image: url({{ bg }})">
 <section id="Nav"> 
    <div id="myNav" class="overlay">
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   	<div class="overlay-content">
     	<a href="#logo" onclick="closeNav()"></i>MainPage</a>
-    	<a href="books_notes/book/book.html"></i>Gate- books & notes</a>
+    	<a href="/materials/"></i>Gate- books & notes</a>
     	<a href="#"></i>Gate- videos</a>
     	<a href="#"></i>Gate- Preparation<sup>online resource</sup></a>
     		<a href="https://chat.whatsapp.com/HM9VJz4a8Ce0TvUZingcxF" target="_blank" class="whataap" title="Join to our whataap group----->>">--need any book??</a>
@@ -107,13 +106,12 @@ function closeNav() {
       </a>
       </div>
       <div>
-        <h4 class="text0">GATE 2020 Syllabus for Computer Science and
-         Information Technology (CSE/IT)...</h4>
+        <h4 class="text0">GATE 2020 Syllabus for {{ sub }}...</h4>
       </div>
 
 			</section>
       <section id="section3">
-        <p style="font-weight: lighter;font-size: 15px;font-family: sans-serif; ">Following syllabus is based on GATE 2020 syllabus of Computer Science and Information Technology (CSE / IT). You can also download it in the pdf format from the given link at the bottom of this article.
+        <p style="font-weight: lighter;font-size: 15px;font-family: sans-serif; ">Following syllabus is based on GATE 2020 syllabus of {{ sub }}. You can also download it in the pdf format from the given link at the bottom of this article.
 
 </p>
       <h6><a href="https://qualifygate.com/download/page/#https://qualifygate.com/download/syllabi/GA.pdf" style="text-decoration: none;"><i class="fas fa-download"></i>Syllabus for General Aptitude</a>(GA) (common to all papers)</h6>
